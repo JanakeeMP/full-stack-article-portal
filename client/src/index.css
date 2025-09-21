@@ -24,8 +24,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -65,4 +63,79 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/*nav {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0 15px;
+}*/
+
+nav {
+  background-color: #333;
+  padding: 20px 0;
+  text-align: left;
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+nav li {
+  margin: 15px 0;
+  display: block;
+}
+
+/* Optionally, add padding to your main content to avoid overlap */
+.main-content {
+  margin-left: 220px; /* Adjust based on nav width */
+  padding: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+a h3 {
+  color: #333;
+  margin-bottom: 0.5em;
+}
+
+a p {
+  color: #666;
+  font-size: 0.9em;
+}
+
+a:hover {
+  text-decoration: underline;
 }
