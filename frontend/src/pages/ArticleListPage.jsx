@@ -1,5 +1,5 @@
 import articles from "../article-content";
-import ArticleList from "../ArticleList";
+import ArticleList from "../components/ArticleList";
 
 export default function ArticleListPage (){
     return (

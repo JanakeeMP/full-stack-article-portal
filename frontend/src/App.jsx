@@ -8,7 +8,7 @@ import AboutPage from './pages/AboutPage';
 import CareersPage from './pages/CareersPage';
 import ArticleListPage from './pages/ArticleListPage';
 import ArticlePage from './pages/ArticlePage';
-import Layout from './Layout';
+import Layout from './components/Layout';
 import NotFoundPage from './pages/NotFoundPage';
 
 const routes = [{
