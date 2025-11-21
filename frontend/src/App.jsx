@@ -1,14 +1,14 @@
 import {
   createBrowserRouter,
   RouterProvider,
-} from 'react-router-dom'
-import './App.css'
+} from 'react-router-dom'  
 import HomePage from './pages/HomePage'
 import ArticleListPage from './pages/ArticleListPage';
 import ArticlePage from './pages/ArticlePage';
 import Layout from './components/Layout';
 import NotFoundPage from './pages/NotFoundPage';
 import AboutPage from './pages/AboutPage';
+import LoginPage from './pages/LoginPage';
 
 const routes = [{
   path: '/',
@@ -18,7 +18,8 @@ const routes = [{
   { path: '/', element: <HomePage /> },
   { path: '/about', element: <AboutPage /> },
   { path: '/articles', element: <ArticleListPage /> },
-  { path: '/articles/:name', element: <ArticlePage /> }]
+  { path: '/articles/:name', element: <ArticlePage /> },
+  { path: '/login', element: <LoginPage />,}]
 }]
 
 const router = createBrowserRouter(routes);
