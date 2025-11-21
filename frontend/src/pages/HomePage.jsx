@@ -56,7 +56,7 @@ export default function HomePage() {
                 <p className="lead text-muted mb-4">
                     Start your journey as a writer, reader, or commenter today.
                 </p>
-                <a href="/Signup" className="btn btn-primary btn-lg px-4">
+                <a href="/create-account" className="btn btn-primary btn-lg px-4">
                     Create an Account
                 </a>
             </section>

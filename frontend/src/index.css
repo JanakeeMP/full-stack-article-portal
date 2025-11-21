@@ -1,4 +1,4 @@
-body {
+body, :root{
   margin: 0;
   background-color: #e1ecff;
 }
@@ -18,11 +18,6 @@ a:hover {
 
 .nav-link {
   color: #ffffff;
-}
-
-:root {
-  color: #000;
-  background-color: #fff;
 }
 
 .hero-section {
