@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import heroimage from "../assets/homepage.jpg";
 
 export default function HomePage() {
     return (
@@ -45,13 +46,14 @@ export default function HomePage() {
                     writer — this is your place to explore knowledge and creativity.
                 </p>
                 <img
-                    src="https://picsum.photos/900/300?random=24"
+                    src={heroimage}
                     alt="Inspiration"
+                    style={{ maxHeight: "300px", objectFit: "cover", width: "100%", maxWidth: "900px" }}
                     className="img-fluid rounded shadow-sm"
                 />
             </section>
 
-            <section className="join-section text-center p-5 rounded shadow-sm mb-5">
+            <section className="join-section text-center p-4 rounded shadow-sm mb-5">
                 <h2 className="fw-bold mb-3">Join Our Growing Community</h2>
                 <p className="lead text-muted mb-4">
                     Start your journey as a writer, reader, or commenter today.
@@ -63,7 +65,7 @@ export default function HomePage() {
 
 
             <footer className="text-center text-muted py-4 mt-5 border-top small">
-                © {new Date().getFullYear()} InsightHub — Made with ❤️ for learning React + Bootstrap.
+                © {new Date().getFullYear()} InsightHub — Built with passion for learning and creativity..
             </footer>
         </div>
     );

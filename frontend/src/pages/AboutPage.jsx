@@ -1,3 +1,5 @@
+import aboutImage from "../assets/aboutpage.jpg";
+
 export default function AboutPage() {
     return (
         <div className="container py-5">
@@ -49,8 +51,9 @@ export default function AboutPage() {
                     Over time, it has grown into a community of passionate readers and inspiring writers.
                 </p>
                 <img
-                    src="https://picsum.photos/900/300?random=65"
-                    alt="InsightHub Story"
+                    src={aboutImage}
+                    alt="Inspiration"
+                    style={{ maxHeight: "300px", objectFit: "cover", width: "100%", maxWidth: "900px" }}
                     className="img-fluid rounded shadow-sm"
                 />
             </section>
