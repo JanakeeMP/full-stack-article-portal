@@ -57,7 +57,7 @@ export default function NavBar() {
                                         </button>
                                     ) : (
                                         <button
-                                            className="btn btn-sm btn-outline-light"
+                                            className="btn btn-sm btn-light"
                                             onClick={() => navigate('/login')}
                                         >
                                             Sign In
