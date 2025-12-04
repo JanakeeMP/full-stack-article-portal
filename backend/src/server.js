@@ -23,11 +23,14 @@ const app = express();
 
 app.use(express.json());
 
+
 let db;
 async function connectToDB() {
     const uri = !process.env.MONGODB_USERNAME
     ? 'mongodb://127.0.0.1:27017'
     : `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.tozr9yv.mongodb.net/?appName=Cluster0`;
+
+    console.log('Mongo URI:', uri);
 
     const client = new MongoClient(uri, {
         serverApi: {
@@ -37,20 +40,21 @@ async function connectToDB() {
         }
     });
 
-    await client.connect();
-
-    db = client.db('full-stack-react-db');
-
-    if (!db) {
-        return res.status(500).json({ message: 'Database connection failed' });
+    try {
+        await client.connect();
+        db = client.db('full-stack-react-db');
+        console.log('Successfully connected to MongoDB');
+    } catch (err) {
+        console.error('Failed to connect to MongoDB:', err.message);
+        throw err;
     }
 }
 
-//app.use(express.static(path.join(__dirname, '../dist')))
+app.use(express.static(path.join(__dirname, '../dist')))
 
-/*app.get(/^(?!\/api).+/, (req, res) => {
+app.get(/^(?!\/api).+/, (req, res) => {
     res.sendFile(path.join(__dirname, '../dist/index.html'));
-});*/
+});
 
 app.get("/api/articles/:name", async function (req, res) {
     const getArticle = await db.collection('articles').findOne({ name: req.params.name });
