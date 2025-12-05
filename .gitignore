@@ -9,3 +9,5 @@ frontend/.DS_Store
 
 backend/.env
 backend/prod-env.yaml
+
+backend/dist
