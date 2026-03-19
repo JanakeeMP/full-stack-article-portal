@@ -12,10 +12,6 @@ A modern full-stack web application for reading, and discussing articles. Built 
 - **RESTful API** — Clean backend API for all operations
 - **Cloud Deployment** — Fully deployed on Google Cloud App Engine
 
-## Live Demo
-
-Visit the live application: https://full-stack-react-e9657.ts.r.appspot.com
-
 ## Project Structure
 
 ```
@@ -306,6 +302,9 @@ Recommended: Use `gcloud secrets` to manage sensitive data:
 gcloud secrets create mongodb-password --data-file=-
 gcloud secrets versions access latest --secret=mongodb-password
 ```
+## Live Demo
+
+Visit the live application: https://full-stack-react-e9657.ts.r.appspot.com
 
 ## License
 
